@@ -12,15 +12,16 @@
 </head>
 
 <body>
+    {{--Header section--}}
+    <x-layouts.header>
+    </x-layouts.header>
 
-<x-navbar />
+    <main>
+        {{ $slot }}
+    </main>
 
-<main>
-    {{ $slot }}
-</main>
+    <x-footer />
 
-<x-footer />
-
-@livewireScripts
+    @livewireScripts
 </body>
 </html>
