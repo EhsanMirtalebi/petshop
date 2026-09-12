@@ -82,7 +82,7 @@
             CAROUSEL
         ====================================================== --}}
         <div
-            class="relative aspect-[8/3] w-full overflow-hidden rounded-2xl bg-primary sm:rounded-3xl"
+            class="relative aspect-[8/3] max-h-96 w-full overflow-hidden rounded-2xl bg-primary sm:rounded-3xl"
             @touchstart="touchStart($event)"
             @touchend="touchEnd($event)"
             style="touch-action: pan-y;"
@@ -142,7 +142,7 @@
                         >
 
                             {{-- Badge --}}
-                            <div class="mb-[2%]">
+                            <div class="mb-[2%] xl:mt-4">
 
                                 <span
                                     class="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-2 py-1 text-[7px] font-medium backdrop-blur-sm sm:gap-2 sm:px-3 sm:py-1.5 sm:text-[10px] lg:px-4 lg:py-2 lg:text-xs"
