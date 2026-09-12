@@ -39,12 +39,12 @@
     {{-- =========================================================
         MAIN HEADER
     ========================================================== --}}
-    <div class="border-b border-neutral-100">
+    <div>
 
         <div class="mx-auto max-w-7xl px-4">
 
             {{-- Main Row --}}
-            <div class="flex h-16 items-center justify-between gap-3 sm:h-20">
+            <div class="flex mt-2 sm:mt-4 items-center justify-between gap-3">
 
 
                 {{-- =================================================
@@ -114,7 +114,7 @@
                         <input
                             type="search"
                             placeholder="جستجوی محصولات، برندها و ..."
-                            class="w-full rounded-2xl border border-neutral-200 bg-neutral-50 py-3.5 pr-12 pl-5 text-sm text-neutral-900 outline-none transition placeholder:text-neutral-400 focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/10"
+                            class="w-full max-w-xl rounded-full border border-neutral-200 bg-neutral-50 py-3 pr-12 pl-5 text-sm text-neutral-900 outline-none transition placeholder:text-neutral-400 focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/10"
                         >
 
                         {{-- Search Icon --}}
@@ -209,14 +209,14 @@
             {{-- =================================================
                 MOBILE SEARCH
             ================================================== --}}
-            <div class="pb-3 sm:hidden">
+            <div class="sm:hidden mt-2">
 
                 <div class="relative">
 
                     <input
                         type="search"
                         placeholder="جستجوی محصولات و برندها..."
-                        class="w-full rounded-xl border border-neutral-200 bg-neutral-50 py-3 pr-11 pl-4 text-sm text-neutral-900 outline-none transition placeholder:text-neutral-400 focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/10"
+                        class="w-full rounded-full border border-neutral-200 bg-neutral-50 py-3 pr-11 pl-4 text-sm text-neutral-900 outline-none transition placeholder:text-neutral-400 focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/10"
                     >
 
                     <svg
@@ -248,7 +248,7 @@
     ========================================================== --}}
     <nav class="hidden border-b border-neutral-100 lg:block">
 
-        <div class="mx-auto flex max-w-7xl items-center justify-center gap-10 px-4">
+        <div class="mx-4 xl:mx-auto flex max-w-7xl items-center gap-10 px-4">
 
             {{-- Home --}}
             <a
