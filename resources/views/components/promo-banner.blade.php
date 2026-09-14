@@ -1,4 +1,4 @@
-<section class="py-10 sm:py-14">
+<section class="pb-2">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
         <div class="grid sm:grid-cols-2 gap-4">
