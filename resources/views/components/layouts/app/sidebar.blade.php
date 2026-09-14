@@ -11,7 +11,7 @@
     @livewireStyles
 </head>
 
-<body>
+<body class="bg-white">
     {{--Header section--}}
     <x-layouts.header>
     </x-layouts.header>

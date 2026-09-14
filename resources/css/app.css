@@ -12,6 +12,16 @@
     display: none !important;
 }
 
+.scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+    display: none;
+}
+
+
 @font-face {
     font-family: 'Vazirmatn';
     src: url('/fonts/vazirmatn/Vazirmatn-Regular.woff2') format('woff2');
