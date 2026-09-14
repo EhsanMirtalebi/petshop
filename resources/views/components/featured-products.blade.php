@@ -1,443 +1,600 @@
-<section class="py-6">
-    <div class="mx-auto max-w-7xl px-2">
+<section class="py-4 sm:py-6">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-        {{-- Section Header --}}
-        <div class="mb-7 flex items-end justify-between sm:mb-9">
+        {{-- Header --}}
+        <div class="mb-6 flex items-end justify-between sm:mb-8">
             <div>
-                <span class="block text-sm font-medium text-primary">
-                    انتخاب‌های محبوب
+                <span class="mb-1 block text-xs font-medium text-primary sm:text-sm">
+                    انتخابی برای دوست کوچولوی شما
                 </span>
 
-                <h2 class="text-2xl font-bold text-gray-900 sm:text-3xl">
+                <h2 class="text-xl font-bold text-slate-900 sm:text-2xl">
                     محصولات پیشنهادی
                 </h2>
             </div>
 
             <a
                 href="#"
-                class="hidden items-center gap-1.5 text-sm font-medium text-primary transition hover:gap-2.5 sm:flex"
+                class="flex items-center gap-1 text-xs font-medium text-primary transition hover:opacity-80 sm:text-sm"
             >
                 مشاهده همه
 
                 <svg
                     class="h-4 w-4"
-                    viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
+                    viewBox="0 0 24 24"
                 >
-                    <path d="M5 12h14"/>
-                    <path d="m13 6 6 6-6 6"/>
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 19l-7-7 7-7"
+                    />
                 </svg>
             </a>
         </div>
 
 
-        {{-- Products Grid --}}
-        <div class="grid grid-cols-2 gap-3 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4">
+        {{-- Products --}}
+        <div
+            class="flex gap-3 overflow-x-auto pb-3 scrollbar-none
+                   sm:gap-4 lg:gap-5 lg:pb-4"
+        >
 
-            {{-- Product Card --}}
-            <article
-                class="group overflow-hidden rounded-2xl border border-gray-100 bg-white transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+            {{-- Product 1 --}}
+            <div
+                class="group w-[150px] shrink-0 overflow-hidden rounded-2xl border border-slate-100 bg-white
+                       shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md
+                       sm:w-[175px] lg:w-[180px]"
             >
-
-                {{-- Image --}}
-                <a
-                    href="#"
-                    class="relative block aspect-square overflow-hidden bg-gray-100"
-                >
-
-                    {{-- Discount --}}
-                    <span
-                        class="absolute right-3 top-3 z-10 rounded-full bg-primary px-2.5 py-1 text-[11px] font-medium text-white"
-                    >
-                        ۱۵٪ تخفیف
-                    </span>
-
+                <div class="relative aspect-square overflow-hidden bg-slate-50">
                     <img
-                        src="{{ asset('images/products/product-1.png') }}"
-                        alt="غذای خشک سگ"
+                        src="{{ asset('images/products/product-1.jpg') }}"
+                        alt="غذای خشک گربه"
                         class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                    />
+                    >
 
-                    {{-- Wishlist --}}
                     <button
                         type="button"
-                        class="absolute left-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-gray-500 shadow-sm backdrop-blur transition hover:text-primary"
+                        class="absolute right-2 top-2 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-slate-500 shadow-sm transition hover:text-red-500"
                     >
                         <svg
-                            class="h-4.5 w-4.5"
-                            viewBox="0 0 24 24"
+                            class="h-4 w-4"
                             fill="none"
                             stroke="currentColor"
-                            stroke-width="1.8"
+                            viewBox="0 0 24 24"
                         >
                             <path
-                                d="M20.8 8.6c0 5.5-8.8 10.4-8.8 10.4S3.2 14.1 3.2 8.6A4.6 4.6 0 0 1 12 6.1a4.6 4.6 0 0 1 8.8 2.5Z"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="1.8"
+                                d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"
                             />
                         </svg>
                     </button>
-                </a>
+                </div>
 
+                <div class="p-3">
+                    <p class="mb-1 text-[10px] text-slate-400 sm:text-xs">
+                        غذای گربه
+                    </p>
 
-                {{-- Product Info --}}
-                <div class="p-3 sm:p-4">
-
-                    {{-- Category --}}
-                    <span class="text-[11px] text-gray-400 sm:text-xs">
-                        غذای سگ
-                    </span>
-
-                    {{-- Product Name --}}
-                    <a
-                        href="#"
-                        class="mt-1 block truncate text-sm font-semibold text-gray-800 transition hover:text-primary sm:text-base"
+                    <h3
+                        class="line-clamp-2 min-h-[36px] text-xs font-semibold leading-5 text-slate-800 sm:text-sm"
                     >
-                        غذای خشک سگ رویال کنین
-                    </a>
+                        غذای خشک گربه رویال کنین
+                    </h3>
 
-
-                    {{-- Rating --}}
-                    <div class="mt-2 flex items-center gap-1">
-                        <div class="flex text-amber-400">
-                            <svg class="h-3.5 w-3.5 fill-current" viewBox="0 0 20 20">
-                                <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.9L10 1.5Z"/>
-                            </svg>
-                            <svg class="h-3.5 w-3.5 fill-current" viewBox="0 0 20 20">
-                                <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.9L10 1.5Z"/>
-                            </svg>
-                            <svg class="h-3.5 w-3.5 fill-current" viewBox="0 0 20 20">
-                                <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-5.2-2.8 1-5.9-4.3-4.2 5.9-.9L10 1.5Z"/>
-                            </svg>
-                            <svg class="h-3.5 w-3.5 fill-current" viewBox="0 0 20 20">
-                                <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.9L10 1.5Z"/>
-                            </svg>
-                            <svg class="h-3.5 w-3.5 fill-current" viewBox="0 0 20 20">
-                                <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.9L10 1.5Z"/>
-                            </svg>
-                        </div>
-
-                        <span class="text-[11px] text-gray-400">
-                            (۲۴)
-                        </span>
-                    </div>
-
-
-                    {{-- Price --}}
-                    <div class="mt-3 flex items-end justify-between gap-2">
-
+                    <div class="mt-3 flex items-center justify-between gap-2">
                         <div>
-                            <span class="text-[11px] text-gray-400 line-through">
+                            <span class="block text-sm font-bold text-slate-900">
                                 ۸۵۰,۰۰۰
                             </span>
 
-                            <div class="mt-0.5">
-                                <span class="text-sm font-bold text-gray-900 sm:text-base">
-                                    ۷۲۲,۵۰۰
-                                </span>
-
-                                <span class="mr-0.5 text-[10px] text-gray-400">
-                                    تومان
-                                </span>
-                            </div>
+                            <span class="text-[9px] text-slate-400">
+                                تومان
+                            </span>
                         </div>
 
-
-                        {{-- Add To Cart --}}
                         <button
                             type="button"
-                            class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-primary text-white transition hover:bg-primary/90 active:scale-95"
-                            aria-label="افزودن به سبد خرید"
+                            class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary text-white transition hover:opacity-90"
                         >
                             <svg
-                                class="h-4.5 w-4.5"
-                                viewBox="0 0 24 24"
+                                class="h-4 w-4"
                                 fill="none"
                                 stroke="currentColor"
-                                stroke-width="1.8"
+                                viewBox="0 0 24 24"
                             >
-                                <path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 1.9-1.4L21 8H6"/>
-                                <circle cx="10" cy="20" r="1"/>
-                                <circle cx="18" cy="20" r="1"/>
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M12 5v14M5 12h14"
+                                />
                             </svg>
                         </button>
-
                     </div>
-
                 </div>
-            </article>
+            </div>
 
 
             {{-- Product 2 --}}
-            <article
-                class="group overflow-hidden rounded-2xl border border-gray-100 bg-white transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+            <div
+                class="group w-[150px] shrink-0 overflow-hidden rounded-2xl border border-slate-100 bg-white
+                       shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md
+                       sm:w-[175px] lg:w-[180px]"
             >
-                <a
-                    href="#"
-                    class="relative block aspect-square overflow-hidden bg-gray-100"
-                >
+                <div class="relative aspect-square overflow-hidden bg-slate-50">
                     <img
                         src="{{ asset('images/products/product-2.jpg') }}"
-                        alt="غذای گربه"
+                        alt="غذای خشک سگ"
                         class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                    />
+                    >
 
                     <button
                         type="button"
-                        class="absolute left-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-gray-500 shadow-sm backdrop-blur transition hover:text-primary"
+                        class="absolute right-2 top-2 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-slate-500 shadow-sm transition hover:text-red-500"
                     >
-                        <svg
-                            class="h-4.5 w-4.5"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.8"
-                        >
-                            <path d="M20.8 8.6c0 5.5-8.8 10.4-8.8 10.4S3.2 14.1 3.2 8.6A4.6 4.6 0 0 1 12 6.1a4.6 4.6 0 0 1 8.8 2.5Z"/>
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="1.8"
+                                d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"
+                            />
                         </svg>
                     </button>
-                </a>
+                </div>
 
-                <div class="p-3 sm:p-4">
-                    <span class="text-[11px] text-gray-400 sm:text-xs">
-                        غذای گربه
-                    </span>
+                <div class="p-3">
+                    <p class="mb-1 text-[10px] text-slate-400 sm:text-xs">
+                        غذای سگ
+                    </p>
 
-                    <a
-                        href="#"
-                        class="mt-1 block truncate text-sm font-semibold text-gray-800 hover:text-primary sm:text-base"
+                    <h3
+                        class="line-clamp-2 min-h-[36px] text-xs font-semibold leading-5 text-slate-800 sm:text-sm"
                     >
-                        غذای خشک گربه جوسرا
-                    </a>
+                        غذای خشک سگ بالغ جوسرا
+                    </h3>
 
-                    <div class="mt-2 flex items-center gap-1">
-                        <div class="flex text-amber-400">
-                            ★★★★★
-                        </div>
-                        <span class="text-[11px] text-gray-400">(۱۸)</span>
-                    </div>
-
-                    <div class="mt-3 flex items-end justify-between gap-2">
+                    <div class="mt-3 flex items-center justify-between gap-2">
                         <div>
-                            <div>
-                                <span class="text-sm font-bold text-gray-900 sm:text-base">
-                                    ۶۴۰,۰۰۰
-                                </span>
-                                <span class="mr-0.5 text-[10px] text-gray-400">
-                                    تومان
-                                </span>
-                            </div>
+                            <span class="block text-sm font-bold text-slate-900">
+                                ۷۹۰,۰۰۰
+                            </span>
+
+                            <span class="text-[9px] text-slate-400">
+                                تومان
+                            </span>
                         </div>
 
                         <button
                             type="button"
-                            class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-primary text-white transition hover:bg-primary/90 active:scale-95"
+                            class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary text-white transition hover:opacity-90"
                         >
-                            <svg
-                                class="h-4.5 w-4.5"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="1.8"
-                            >
-                                <path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 1.9-1.4L21 8H6"/>
-                                <circle cx="10" cy="20" r="1"/>
-                                <circle cx="18" cy="20" r="1"/>
+                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M12 5v14M5 12h14"
+                                />
                             </svg>
                         </button>
                     </div>
                 </div>
-            </article>
+            </div>
 
 
             {{-- Product 3 --}}
-            <article
-                class="group overflow-hidden rounded-2xl border border-gray-100 bg-white transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+            <div
+                class="group w-[150px] shrink-0 overflow-hidden rounded-2xl border border-slate-100 bg-white
+                       shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md
+                       sm:w-[175px] lg:w-[180px]"
             >
-                <a
-                    href="#"
-                    class="relative block aspect-square overflow-hidden bg-gray-100"
-                >
-                    <span
-                        class="absolute right-3 top-3 z-10 rounded-full bg-primary px-2.5 py-1 text-[11px] font-medium text-white"
-                    >
-                        جدید
-                    </span>
-
+                <div class="relative aspect-square overflow-hidden bg-slate-50">
                     <img
                         src="{{ asset('images/products/product-3.jpg') }}"
-                        alt="اسباب بازی حیوانات"
+                        alt="تشویقی سگ"
                         class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                    />
+                    >
 
                     <button
                         type="button"
-                        class="absolute left-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-gray-500 shadow-sm backdrop-blur transition hover:text-primary"
+                        class="absolute right-2 top-2 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-slate-500 shadow-sm transition hover:text-red-500"
                     >
-                        <svg
-                            class="h-4.5 w-4.5"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.8"
-                        >
-                            <path d="M20.8 8.6c0 5.5-8.8 10.4-8.8 10.4S3.2 14.1 3.2 8.6A4.6 4.6 0 0 1 12 6.1a4.6 4.6 0 0 1 8.8 2.5Z"/>
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="1.8"
+                                d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"
+                            />
                         </svg>
                     </button>
-                </a>
+                </div>
 
-                <div class="p-3 sm:p-4">
-                    <span class="text-[11px] text-gray-400 sm:text-xs">
-                        اسباب بازی
-                    </span>
+                <div class="p-3">
+                    <p class="mb-1 text-[10px] text-slate-400 sm:text-xs">
+                        تشویقی
+                    </p>
 
-                    <a
-                        href="#"
-                        class="mt-1 block truncate text-sm font-semibold text-gray-800 hover:text-primary sm:text-base"
+                    <h3
+                        class="line-clamp-2 min-h-[36px] text-xs font-semibold leading-5 text-slate-800 sm:text-sm"
                     >
-                        توپ بازی مخصوص سگ
-                    </a>
+                        تشویقی نرم سگ با طعم مرغ
+                    </h3>
 
-                    <div class="mt-2 flex items-center gap-1">
-                        <div class="flex text-amber-400">
-                            ★★★★★
-                        </div>
-                        <span class="text-[11px] text-gray-400">(۳۱)</span>
-                    </div>
-
-                    <div class="mt-3 flex items-end justify-between gap-2">
+                    <div class="mt-3 flex items-center justify-between gap-2">
                         <div>
-                            <span class="text-sm font-bold text-gray-900 sm:text-base">
-                                ۳۹۰,۰۰۰
+                            <span class="block text-sm font-bold text-slate-900">
+                                ۲۹۰,۰۰۰
                             </span>
-                            <span class="mr-0.5 text-[10px] text-gray-400">
+
+                            <span class="text-[9px] text-slate-400">
                                 تومان
                             </span>
                         </div>
 
                         <button
                             type="button"
-                            class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-primary text-white transition hover:bg-primary/90 active:scale-95"
+                            class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary text-white transition hover:opacity-90"
                         >
-                            <svg
-                                class="h-4.5 w-4.5"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="1.8"
-                            >
-                                <path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 1.9-1.4L21 8H6"/>
-                                <circle cx="10" cy="20" r="1"/>
-                                <circle cx="18" cy="20" r="1"/>
+                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M12 5v14M5 12h14"
+                                />
                             </svg>
                         </button>
                     </div>
                 </div>
-            </article>
+            </div>
 
 
             {{-- Product 4 --}}
-            <article
-                class="group overflow-hidden rounded-2xl border border-gray-100 bg-white transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+            <div
+                class="group w-[150px] shrink-0 overflow-hidden rounded-2xl border border-slate-100 bg-white
+                       shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md
+                       sm:w-[175px] lg:w-[180px]"
             >
-                <a
-                    href="#"
-                    class="relative block aspect-square overflow-hidden bg-gray-100"
-                >
+                <div class="relative aspect-square overflow-hidden bg-slate-50">
                     <img
                         src="{{ asset('images/products/product-4.jpg') }}"
-                        alt="شامپو حیوانات"
+                        alt="خاک گربه"
                         class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                    />
+                    >
 
                     <button
                         type="button"
-                        class="absolute left-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-gray-500 shadow-sm backdrop-blur transition hover:text-primary"
+                        class="absolute right-2 top-2 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-slate-500 shadow-sm transition hover:text-red-500"
                     >
-                        <svg
-                            class="h-4.5 w-4.5"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.8"
-                        >
-                            <path d="M20.8 8.6c0 5.5-8.8 10.4-8.8 10.4S3.2 14.1 3.2 8.6A4.6 4.6 0 0 1 12 6.1a4.6 4.6 0 0 1 8.8 2.5Z"/>
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="1.8"
+                                d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"
+                            />
                         </svg>
                     </button>
-                </a>
+                </div>
 
-                <div class="p-3 sm:p-4">
-                    <span class="text-[11px] text-gray-400 sm:text-xs">
-                        بهداشت و مراقبت
-                    </span>
+                <div class="p-3">
+                    <p class="mb-1 text-[10px] text-slate-400 sm:text-xs">
+                        بهداشت
+                    </p>
 
-                    <a
-                        href="#"
-                        class="mt-1 block truncate text-sm font-semibold text-gray-800 hover:text-primary sm:text-base"
+                    <h3
+                        class="line-clamp-2 min-h-[36px] text-xs font-semibold leading-5 text-slate-800 sm:text-sm"
                     >
-                        شامپو مخصوص حیوانات
-                    </a>
+                        خاک گربه کلامپینگ با کیفیت بالا
+                    </h3>
 
-                    <div class="mt-2 flex items-center gap-1">
-                        <div class="flex text-amber-400">
-                            ★★★★★
-                        </div>
-                        <span class="text-[11px] text-gray-400">(۱۲)</span>
-                    </div>
-
-                    <div class="mt-3 flex items-end justify-between gap-2">
+                    <div class="mt-3 flex items-center justify-between gap-2">
                         <div>
-                            <span class="text-sm font-bold text-gray-900 sm:text-base">
-                                ۲۸۰,۰۰۰
+                            <span class="block text-sm font-bold text-slate-900">
+                                ۳۹۰,۰۰۰
                             </span>
-                            <span class="mr-0.5 text-[10px] text-gray-400">
+
+                            <span class="text-[9px] text-slate-400">
                                 تومان
                             </span>
                         </div>
 
                         <button
                             type="button"
-                            class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-primary text-white transition hover:bg-primary/90 active:scale-95"
+                            class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary text-white transition hover:opacity-90"
                         >
-                            <svg
-                                class="h-4.5 w-4.5"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="1.8"
-                            >
-                                <path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 1.9-1.4L21 8H6"/>
-                                <circle cx="10" cy="20" r="1"/>
-                                <circle cx="18" cy="20" r="1"/>
+                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M12 5v14M5 12h14"
+                                />
                             </svg>
                         </button>
                     </div>
                 </div>
-            </article>
-
-        </div>
+            </div>
 
 
-        {{-- Mobile: View All --}}
-        <div class="mt-7 text-center sm:hidden">
-            <a
-                href="#"
-                class="inline-flex items-center gap-1.5 text-sm font-medium text-primary"
+            {{-- Product 5 --}}
+            <div
+                class="group w-[150px] shrink-0 overflow-hidden rounded-2xl border border-slate-100 bg-white
+                       shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md
+                       sm:w-[175px] lg:w-[180px]"
             >
-                مشاهده همه محصولات
+                <div class="relative aspect-square overflow-hidden bg-slate-50">
+                    <img
+                        src="{{ asset('images/products/product-1.jpg') }}"
+                        alt="اسباب بازی گربه"
+                        class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                    >
 
-                <svg
-                    class="h-4 w-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                >
-                    <path d="M5 12h14"/>
-                    <path d="m13 6 6 6-6 6"/>
-                </svg>
-            </a>
+                    <button
+                        type="button"
+                        class="absolute right-2 top-2 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-slate-500 shadow-sm transition hover:text-red-500"
+                    >
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="1.8"
+                                d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"
+                            />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="p-3">
+                    <p class="mb-1 text-[10px] text-slate-400 sm:text-xs">
+                        اسباب بازی
+                    </p>
+
+                    <h3
+                        class="line-clamp-2 min-h-[36px] text-xs font-semibold leading-5 text-slate-800 sm:text-sm"
+                    >
+                        توپ بازی و سرگرمی مخصوص گربه
+                    </h3>
+
+                    <div class="mt-3 flex items-center justify-between gap-2">
+                        <div>
+                            <span class="block text-sm font-bold text-slate-900">
+                                ۱۸۰,۰۰۰
+                            </span>
+
+                            <span class="text-[9px] text-slate-400">
+                                تومان
+                            </span>
+                        </div>
+
+                        <button
+                            type="button"
+                            class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary text-white transition hover:opacity-90"
+                        >
+                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M12 5v14M5 12h14"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            {{-- Product 6 --}}
+            <div
+                class="group w-[150px] shrink-0 overflow-hidden rounded-2xl border border-slate-100 bg-white
+                       shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md
+                       sm:w-[175px] lg:w-[180px]"
+            >
+                <div class="relative aspect-square overflow-hidden bg-slate-50">
+                    <img
+                        src="{{ asset('images/products/product-2.jpg') }}"
+                        alt="ظرف غذای حیوانات"
+                        class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                    >
+
+                    <button
+                        type="button"
+                        class="absolute right-2 top-2 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-slate-500 shadow-sm transition hover:text-red-500"
+                    >
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="1.8"
+                                d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"
+                            />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="p-3">
+                    <p class="mb-1 text-[10px] text-slate-400 sm:text-xs">
+                        لوازم
+                    </p>
+
+                    <h3
+                        class="line-clamp-2 min-h-[36px] text-xs font-semibold leading-5 text-slate-800 sm:text-sm"
+                    >
+                        ظرف غذای استیل ضد زنگ
+                    </h3>
+
+                    <div class="mt-3 flex items-center justify-between gap-2">
+                        <div>
+                            <span class="block text-sm font-bold text-slate-900">
+                                ۳۲۰,۰۰۰
+                            </span>
+
+                            <span class="text-[9px] text-slate-400">
+                                تومان
+                            </span>
+                        </div>
+
+                        <button
+                            type="button"
+                            class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary text-white transition hover:opacity-90"
+                        >
+                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M12 5v14M5 12h14"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            {{-- Product 7 --}}
+            <div
+                class="group w-[150px] shrink-0 overflow-hidden rounded-2xl border border-slate-100 bg-white
+                       shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md
+                       sm:w-[175px] lg:w-[180px]"
+            >
+                <div class="relative aspect-square overflow-hidden bg-slate-50">
+                    <img
+                        src="{{ asset('images/products/product-3.jpg') }}"
+                        alt="شانه حیوانات"
+                        class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                    >
+
+                    <button
+                        type="button"
+                        class="absolute right-2 top-2 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-slate-500 shadow-sm transition hover:text-red-500"
+                    >
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="1.8"
+                                d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"
+                            />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="p-3">
+                    <p class="mb-1 text-[10px] text-slate-400 sm:text-xs">
+                        مراقبت
+                    </p>
+
+                    <h3
+                        class="line-clamp-2 min-h-[36px] text-xs font-semibold leading-5 text-slate-800 sm:text-sm"
+                    >
+                        شانه و برس مخصوص حیوانات خانگی
+                    </h3>
+
+                    <div class="mt-3 flex items-center justify-between gap-2">
+                        <div>
+                            <span class="block text-sm font-bold text-slate-900">
+                                ۲۴۰,۰۰۰
+                            </span>
+
+                            <span class="text-[9px] text-slate-400">
+                                تومان
+                            </span>
+                        </div>
+
+                        <button
+                            type="button"
+                            class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary text-white transition hover:opacity-90"
+                        >
+                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M12 5v14M5 12h14"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            {{-- Product 8 --}}
+            <div
+                class="group w-[150px] shrink-0 overflow-hidden rounded-2xl border border-slate-100 bg-white
+                       shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md
+                       sm:w-[175px] lg:w-[180px]"
+            >
+                <div class="relative aspect-square overflow-hidden bg-slate-50">
+                    <img
+                        src="{{ asset('images/products/product-4.jpg') }}"
+                        alt="ویتامین حیوانات"
+                        class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                    >
+
+                    <button
+                        type="button"
+                        class="absolute right-2 top-2 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-slate-500 shadow-sm transition hover:text-red-500"
+                    >
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="1.8"
+                                d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"
+                            />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="p-3">
+                    <p class="mb-1 text-[10px] text-slate-400 sm:text-xs">
+                        مکمل
+                    </p>
+
+                    <h3
+                        class="line-clamp-2 min-h-[36px] text-xs font-semibold leading-5 text-slate-800 sm:text-sm"
+                    >
+                        مکمل ویتامین و مواد معدنی حیوانات
+                    </h3>
+
+                    <div class="mt-3 flex items-center justify-between gap-2">
+                        <div>
+                            <span class="block text-sm font-bold text-slate-900">
+                                ۴۵۰,۰۰۰
+                            </span>
+
+                            <span class="text-[9px] text-slate-400">
+                                تومان
+                            </span>
+                        </div>
+
+                        <button
+                            type="button"
+                            class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary text-white transition hover:opacity-90"
+                        >
+                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M12 5v14M5 12h14"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
         </div>
-
     </div>
 </section>

@@ -1,4 +1,4 @@
-<section class="bg-white py-4 sm:py-6 lg:py-8">
+<section class="bg-white py-4 sm:py-6">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
         {{-- Header --}}
